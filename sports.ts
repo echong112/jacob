@@ -28,7 +28,7 @@ export async function run() {
     }
   })
 
-  const res = await chain.invoke({
+  const res = await chain.call({
     question:
       'how many teams are in the NBA Eastern conference?'
   }) 
