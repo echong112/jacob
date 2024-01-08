@@ -24,7 +24,7 @@ export async function run() {
   const chain = APIChain.fromLLMAndAPIDocs(model, rapidNBA, {
     headers: {
       "x-rapidapi-host": `${process.env.RAPIDAPI_HOST}`,
-      "x-rapidapi-key": `${process.env.RAPIDAPI_KEY}`, // Replace with your actual API key
+      "x-rapidapi-key": `${process.env.RAPIDAPI_KEY}`,
     }
   })
 
