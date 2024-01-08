@@ -2,7 +2,6 @@ import { OpenAI } from "@langchain/openai"
 import { APIChain } from "langchain/chains"
 
 export async function run() {
-  // const { prompt } = await req.json()
   const rapidNBA = `BASE URL: https://${process.env.RAPIDAPI_HOST}/
 
   API Documentation
