@@ -19,13 +19,6 @@ export async function run() {
   division	String			division=Southeast	The division of the team. 	"Atlantic" "Central" "Northwest" "Pacific" "Southeast" "Southwest" 																				
   search	String			search=Atlanta	The name of the team. string >= 3 characters
   `
-  
-  const apiUrl = `https://${process.env.RAPIDAPI_HOST}`;
-  try {
-    new URL(apiUrl);
-  } catch (error) {
-    throw new Error("Invalid API URL: " + apiUrl);
-  }
 
   const model = new OpenAI({ modelName: "gpt-4-1106-preview" })
   const chain = APIChain.fromLLMAndAPIDocs(model, rapidNBA, {
