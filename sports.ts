@@ -1,7 +1,7 @@
 import { OpenAI } from "@langchain/openai"
 import { APIChain } from "langchain/chains"
 
-export async function run(req?: any) {
+export async function run() {
   // const { prompt } = await req.json()
   const rapidNBA = `BASE URL: https://${process.env.RAPIDAPI_HOST}/
 
@@ -35,7 +35,6 @@ export async function run(req?: any) {
       "x-rapidapi-key": `${process.env.RAPIDAPI_KEY}`, // Replace with your actual API key
     }
   })
-  console.log(chain);
 
   const res = await chain.invoke({
     question:
